@@ -8,6 +8,9 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: mongopass
     volumes:
       - ./mongo/graylog-mongo-init.js:/docker-entrypoint-initdb.d/graylog-mongo-init.js:ro
+#      todo: you can add 'mongo.conf' configurations here if you need.
+#      - ./mongo:/conf/
+#    command: "mongod --config /conf/mongo.conf"
     networks:
       - graylog
 
