@@ -1,0 +1,69 @@
+{
+  "v": 1,
+  "id": "584deee0-2bab-4ed0-9982-34a5581a5101",
+  "rev": 1,
+  "name": "GELF_UDP",
+  "summary": "GELF_UDP",
+  "description": "",
+  "vendor": "DATS.TEAM",
+  "url": "",
+  "parameters": [],
+  "entities": [
+    {
+      "v": "1",
+      "type": {
+        "name": "input",
+        "version": "1"
+      },
+      "id": "be9522e1-96cf-457e-bea1-308af750b89b",
+      "data": {
+        "title": {
+          "@type": "string",
+          "@value": "GELF TCP"
+        },
+        "configuration": {
+          "port": {
+            "@type": "integer",
+            "@value": 12201
+          },
+          "recv_buffer_size": {
+            "@type": "integer",
+            "@value": 1048576
+          },
+          "bind_address": {
+            "@type": "string",
+            "@value": "0.0.0.0"
+          },
+          "tls_cert_file": {
+            "@type": "string",
+            "@value": ""
+          },
+          "decompress_size_limit": {
+            "@type": "integer",
+            "@value": 8388608
+          },
+          "number_worker_threads": {
+            "@type": "integer",
+            "@value": 8
+          }
+        },
+        "static_fields": {},
+        "type": {
+          "@type": "string",
+          "@value": "org.graylog2.inputs.gelf.udp.GELFUDPInput"
+        },
+        "global": {
+          "@type": "boolean",
+          "@value": false
+        },
+        "extractors": []
+      },
+      "constraints": [
+        {
+          "type": "server-version",
+          "version": ">=4.1.6+8a875ab"
+        }
+      ]
+    }
+  ]
+}
